@@ -1,11 +1,10 @@
 ﻿---
 applications:
 - name: sample-console-app
-  instances: 1
   memory: 1G
-  disk_quota: 512M
-  buildpack: binary_buildpack
+  disk: 1G
   stack: windows2012R2
+  buildpack: binary_buildpack
   health-check-type: process
-  command: powershell.exe -Command ".\bin\Release\SampleConsoleApp.exe"
   no-route: true
+  command: ./bin/Release/SampleConsoleApp.exe
